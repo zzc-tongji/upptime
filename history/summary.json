@@ -40,19 +40,19 @@
     "url": "https://gh.$DOMAIN_US/https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg",
     "icon": "https://icons.duckduckgo.com/ip3/gh.$domain_us.ico",
     "slug": "git-hub-proxy-service",
-    "status": "down",
-    "uptime": "1.20%",
-    "uptimeDay": "1.20%",
-    "uptimeWeek": "1.20%",
-    "uptimeMonth": "1.20%",
-    "uptimeYear": "1.20%",
-    "time": 202,
-    "timeDay": 202,
-    "timeWeek": 202,
-    "timeMonth": 202,
-    "timeYear": 202,
+    "status": "up",
+    "uptime": "3.60%",
+    "uptimeDay": "3.60%",
+    "uptimeWeek": "3.60%",
+    "uptimeMonth": "3.60%",
+    "uptimeYear": "3.60%",
+    "time": 233,
+    "timeDay": 233,
+    "timeWeek": 233,
+    "timeMonth": 233,
+    "timeYear": 233,
     "dailyMinutesDown": {
-      "2024-07-11": 0
+      "2024-07-11": 7
     }
   },
   {
