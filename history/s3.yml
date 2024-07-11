@@ -1,7 +1,7 @@
-url: https://f.$DOMAIN_US/
+url: https://file.$DOMAIN_US/
 status: up
 code: 200
-responseTime: 274
-lastUpdated: 2024-07-11T12:12:52.041Z
+responseTime: 93
+lastUpdated: 2024-07-11T12:12:52.463Z
 startTime: 2024-07-11T12:12:51.758Z
 generator: Upptime <https://github.com/upptime/upptime>
