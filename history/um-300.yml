@@ -1,7 +1,7 @@
-url: origin.$DOMAIN_CN
+url: home.$DOMAIN_CN
 status: up
 code: 200
-responseTime: 146
-lastUpdated: 2024-07-11T12:13:00.603Z
+responseTime: 142
+lastUpdated: 2024-07-11T12:13:04.708Z
 startTime: 2024-07-11T12:12:59.869Z
 generator: Upptime <https://github.com/upptime/upptime>
