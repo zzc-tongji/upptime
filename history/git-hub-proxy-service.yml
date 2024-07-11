@@ -1,7 +1,7 @@
 url: https://gh.$DOMAIN_US/https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-status: up
-code: 200
-responseTime: 452
-lastUpdated: 2024-07-11T23:27:52.923Z
+status: down
+code: 502
+responseTime: 119
+lastUpdated: 2024-07-11T23:36:31.462Z
 startTime: 2024-07-11T13:25:20.612Z
 generator: Upptime <https://github.com/upptime/upptime>
