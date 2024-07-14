@@ -1,7 +1,7 @@
 url: https://f.$DOMAIN_US/
-status: down
-code: 502
-responseTime: 367
-lastUpdated: 2024-07-14T19:40:52.932Z
+status: up
+code: 200
+responseTime: 404
+lastUpdated: 2024-07-14T19:49:21.607Z
 startTime: 2024-07-11T13:25:19.805Z
 generator: Upptime <https://github.com/upptime/upptime>
