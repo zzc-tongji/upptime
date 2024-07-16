@@ -61,6 +61,8 @@ status-website:
       href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
+  apiBaseUrl: https://gh.zzc.icu/https://api.github.com
+  userContentBaseUrl: https://gh.zzc.icu/https://raw.githubusercontent.com
 
 # Upptime also supports notifications, assigning issues, and more
 # See https://upptime.js.org/docs/configuration
