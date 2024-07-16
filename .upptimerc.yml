@@ -8,7 +8,7 @@ sites:
   - name: S3 File Service
     url: https://file.$DOMAIN_US/
   - name: GitHub Proxy Service
-    url: https://gh.$DOMAIN_US/https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
+    url: https://gh.$DOMAIN_US/https://api.github.com/
 #
   - name: OSS File Management
     url: https://f.$DOMAIN_CN/
