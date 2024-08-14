@@ -5,11 +5,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/f.$domain_us.ico",
     "slug": "s3-file-management",
     "status": "up",
-    "uptime": "99.55%",
+    "uptime": "99.56%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "99.76%",
-    "uptimeYear": "99.55%",
+    "uptimeYear": "99.56%",
     "time": 303,
     "timeDay": 207,
     "timeWeek": 207,
@@ -46,15 +46,15 @@
     "icon": "https://icons.duckduckgo.com/ip3/gh.$domain_us.ico",
     "slug": "git-hub-proxy-service",
     "status": "up",
-    "uptime": "98.42%",
+    "uptime": "98.44%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
-    "uptimeMonth": "99.01%",
-    "uptimeYear": "98.42%",
+    "uptimeMonth": "99.30%",
+    "uptimeYear": "98.44%",
     "time": 291,
     "timeDay": 654,
     "timeWeek": 327,
-    "timeMonth": 282,
+    "timeMonth": 289,
     "timeYear": 291,
     "dailyMinutesDown": {
       "2024-07-15": 73,
@@ -141,64 +141,70 @@
     "url": "origin.$DOMAIN_CN",
     "icon": "https://icons.duckduckgo.com/ip3/null.ico",
     "slug": "mix-2-at-frp",
-    "status": "up",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "status": "down",
+    "uptime": "99.99%",
+    "uptimeDay": "99.72%",
+    "uptimeWeek": "99.96%",
+    "uptimeMonth": "99.99%",
+    "uptimeYear": "99.99%",
     "time": 234,
     "timeDay": 155,
     "timeWeek": 230,
     "timeMonth": 237,
     "timeYear": 234,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2024-08-14": 4
+    }
   },
   {
     "name": "N40 at FRP",
     "url": "origin.$DOMAIN_CN",
     "icon": "https://icons.duckduckgo.com/ip3/null.ico",
     "slug": "n40-at-frp",
-    "status": "up",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "status": "down",
+    "uptime": "99.99%",
+    "uptimeDay": "99.72%",
+    "uptimeWeek": "99.96%",
+    "uptimeMonth": "99.99%",
+    "uptimeYear": "99.99%",
     "time": 235,
     "timeDay": 157,
     "timeWeek": 228,
     "timeMonth": 236,
     "timeYear": 235,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2024-08-14": 4
+    }
   },
   {
     "name": "UM300 at FRP",
     "url": "origin.$DOMAIN_CN",
     "icon": "https://icons.duckduckgo.com/ip3/null.ico",
     "slug": "um-300-at-frp",
-    "status": "up",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "status": "down",
+    "uptime": "99.99%",
+    "uptimeDay": "99.73%",
+    "uptimeWeek": "99.96%",
+    "uptimeMonth": "99.99%",
+    "uptimeYear": "99.99%",
     "time": 234,
     "timeDay": 163,
     "timeWeek": 232,
     "timeMonth": 235,
     "timeYear": 234,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2024-08-14": 4
+    }
   },
   {
     "name": "MIX2 at Home",
     "url": "home.$DOMAIN_CN",
     "icon": "https://icons.duckduckgo.com/ip3/null.ico",
     "slug": "mix-2-at-home",
-    "status": "up",
+    "status": "down",
     "uptime": "99.92%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
+    "uptimeDay": "99.82%",
+    "uptimeWeek": "99.97%",
     "uptimeMonth": "99.91%",
     "uptimeYear": "99.92%",
     "time": 242,
@@ -207,6 +213,7 @@
     "timeMonth": 245,
     "timeYear": 242,
     "dailyMinutesDown": {
+      "2024-08-14": 3,
       "2024-07-15": 39
     }
   },
@@ -215,10 +222,10 @@
     "url": "home.$DOMAIN_CN",
     "icon": "https://icons.duckduckgo.com/ip3/null.ico",
     "slug": "n40-at-home",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
+    "uptimeDay": "99.91%",
+    "uptimeWeek": "99.99%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
     "time": 229,
@@ -226,16 +233,18 @@
     "timeWeek": 214,
     "timeMonth": 221,
     "timeYear": 229,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2024-08-14": 1
+    }
   },
   {
     "name": "UM300 at Home",
     "url": "home.$DOMAIN_CN",
     "icon": "https://icons.duckduckgo.com/ip3/null.ico",
     "slug": "um-300-at-home",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
@@ -244,6 +253,8 @@
     "timeWeek": 213,
     "timeMonth": 220,
     "timeYear": 218,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2024-08-14": 0
+    }
   }
 ]
