@@ -1,7 +1,7 @@
 url: https://file.$DOMAIN_CN/
-status: down
-code: 0
-responseTime: 0
-lastUpdated: 2024-09-01T08:45:25.396Z
+status: up
+code: 200
+responseTime: 929
+lastUpdated: 2024-09-01T08:53:27.577Z
 startTime: 2024-07-11T13:25:24.031Z
 generator: Upptime <https://github.com/upptime/upptime>
