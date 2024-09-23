@@ -34,18 +34,18 @@ sites:
     port: 60003
     check: "tcp-ping"
 #
-  - name: MIX2 at Home
-    url: home.$DOMAIN_CN
-    port: 60001
-    check: "tcp-ping"
-  - name: N40 at Home
-    url: home.$DOMAIN_CN
-    port: 60002
-    check: "tcp-ping"
-  - name: UM300 at Home
-    url: home.$DOMAIN_CN
-    port: 60003
-    check: "tcp-ping"
+  # - name: MIX2 at Home
+  #   url: home.$DOMAIN_CN
+  #   port: 60001
+  #   check: "tcp-ping"
+  # - name: N40 at Home
+  #   url: home.$DOMAIN_CN
+  #   port: 60002
+  #   check: "tcp-ping"
+  # - name: UM300 at Home
+  #   url: home.$DOMAIN_CN
+  #   port: 60003
+  #   check: "tcp-ping"
 #
 status-website:
   # Add your custom domain name, or remove the `cname` line if you don't have a domain
@@ -61,8 +61,8 @@ status-website:
       href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
-  apiBaseUrl: https://gh.zzc.icu/https://api.github.com/
-  userContentBaseUrl: https://gh.zzc.icu/https://raw.githubusercontent.com/
+  apiBaseUrl: https://api.github.com/
+  userContentBaseUrl: https://raw.githubusercontent.com/
 
 # Upptime also supports notifications, assigning issues, and more
 # See https://upptime.js.org/docs/configuration
