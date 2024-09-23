@@ -38,14 +38,14 @@ sites:
   #   url: home.$DOMAIN_CN
   #   port: 60001
   #   check: "tcp-ping"
-  # - name: N40 at Home
-  #   url: home.$DOMAIN_CN
-  #   port: 60002
-  #   check: "tcp-ping"
-  # - name: UM300 at Home
-  #   url: home.$DOMAIN_CN
-  #   port: 60003
-  #   check: "tcp-ping"
+  - name: N40 at Home
+    url: home.$DOMAIN_CN
+    port: 60002
+    check: "tcp-ping"
+  - name: UM300 at Home
+    url: home.$DOMAIN_CN
+    port: 60003
+    check: "tcp-ping"
 #
 status-website:
   # Add your custom domain name, or remove the `cname` line if you don't have a domain
