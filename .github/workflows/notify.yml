@@ -1,0 +1,18 @@
+on:
+  issues:
+    types: [opened, reopened, closed]
+jobs:
+  notify:
+    name: Notify
+    runs-on: ubuntu-latest
+    steps:
+      - name: Opened
+        if: ${{ github.event.issue.state != 'closed' }}
+        shell: bash
+        run: |
+          curl -d '{"chat":"network","body":"${{ github.event.issue.title }} [${{ github.event.issue.number }}](${{ github.event.issue.url }})","todo":true}' -H 'Content-Type: application/json' -H 'Authorization: Bearer ${{ secrets.FEISHU_SERVICE_TOKEN }}' -X 'POST' 'https://feishu.zzc.cool/service/notification'
+      - name: Closed
+        if: ${{ github.event.issue.state == 'closed' }}
+        shell: bash
+        run: |
+          curl -d '{"chat":"network","body":"[${{ github.event.issue.number }}](${{ github.event.issue.url }}) has been resolved.","todo":false}' -H 'Content-Type: application/json' -H 'Authorization: Bearer ${{ secrets.FEISHU_SERVICE_TOKEN }}' -X 'POST' 'https://feishu.zzc.cool/service/notification'
