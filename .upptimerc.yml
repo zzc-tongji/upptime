@@ -48,17 +48,17 @@ sites:
 status-website:
   # Add your custom domain name, or remove the `cname` line if you don't have a domain
   # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: $OWNER.github.io
-  baseUrl: /$REPO
+  cname: zzc-tongji.github.io
+  baseUrl: /upptime
   logoUrl: https://upptime.js.org/img/icon.svg
   name: Upptime
   introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
   introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
   navbar:
     - title: Status
-      href: https://$OWNER.github.io/$REPO
+      href: https://zzc-tongji.github.io/upptime
     - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+      href: https://github.com/zzc-tongji/upptime
   apiBaseUrl: https://api.github.com
   userContentBaseUrl: https://raw.githubusercontent.com
 
