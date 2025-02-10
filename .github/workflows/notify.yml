@@ -10,9 +10,9 @@ jobs:
         if: ${{ github.event.issue.state != 'closed' }}
         shell: bash
         run: |
-          curl -d '{"chat":"network","title":"Upptime 通知","body":"${{ github.event.issue.title }} [#${{ github.event.issue.number }}](${{ github.event.issue.url }})","todo":true}' -H 'Content-Type: application/json' -H 'Authorization: Bearer ${{ secrets.FEISHU_SERVICE_TOKEN }}' -X 'POST' 'https://feishu.zzc.cool/service/notification'
+          curl -d '{"chat":"network","title":"Upptime 通知","body":"${{ github.event.issue.title }} [#${{ github.event.issue.number }}](${{ github.event.issue.html_url }})","todo":true}' -H 'Content-Type: application/json' -H 'Authorization: Bearer ${{ secrets.FEISHU_SERVICE_TOKEN }}' -X 'POST' 'https://feishu.zzc.cool/service/notification'
       - name: Closed
         if: ${{ github.event.issue.state == 'closed' }}
         shell: bash
         run: |
-          curl -d '{"chat":"network","title":"Upptime 通知","body":"🆗 Issue [#${{ github.event.issue.number }}](${{ github.event.issue.url }}) has been resolved.","todo":false}' -H 'Content-Type: application/json' -H 'Authorization: Bearer ${{ secrets.FEISHU_SERVICE_TOKEN }}' -X 'POST' 'https://feishu.zzc.cool/service/notification'
+          curl -d '{"chat":"network","title":"Upptime 通知","body":"🆗 Issue [#${{ github.event.issue.number }}](${{ github.event.issue.html_url }}) has been resolved.","todo":false}' -H 'Content-Type: application/json' -H 'Authorization: Bearer ${{ secrets.FEISHU_SERVICE_TOKEN }}' -X 'POST' 'https://feishu.zzc.cool/service/notification'
