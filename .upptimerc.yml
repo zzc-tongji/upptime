@@ -10,8 +10,6 @@ sites:
   - name: GitHub Proxy Service
     url: https://gh.$DOMAIN_US/https://api.github.com/
 #
-  - name: OSS File Management
-    url: https://f.$DOMAIN_CN/
   - name: OSS File Service
     url: https://file.$DOMAIN_CN/
   - name: Feishu Service
