@@ -133,18 +133,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/mp.$domain_cn.ico",
     "slug": "movie-pilot-service",
     "status": "down",
-    "uptime": "2.15%",
-    "uptimeDay": "2.15%",
-    "uptimeWeek": "2.15%",
-    "uptimeMonth": "2.15%",
-    "uptimeYear": "2.15%",
+    "uptime": "1.76%",
+    "uptimeDay": "1.76%",
+    "uptimeWeek": "1.76%",
+    "uptimeMonth": "1.76%",
+    "uptimeYear": "1.76%",
     "time": 0,
     "timeDay": 0,
     "timeWeek": 0,
     "timeMonth": 0,
     "timeYear": 0,
     "dailyMinutesDown": {
-      "2025-02-16": 0
+      "2025-02-16": 1
     }
   },
   {
