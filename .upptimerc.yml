@@ -14,6 +14,10 @@ sites:
     url: https://file.$DOMAIN_CN/
   - name: Feishu Service
     url: https://feishu.$DOMAIN_CN/
+  - name: qBittorrent Service
+    url: https://bt.$DOMAIN_CN/scripts/login.js
+  - name: MoviePilot Service
+    url: https://mp.$DOMAIN_CN/index.js
 #
   - name: FRP Service
     url: origin.$DOMAIN_CN
@@ -32,6 +36,10 @@ sites:
     port: 60003
     check: "tcp-ping"
 #
+  - name: OpenVPN at Home
+    url: home.$DOMAIN_CN
+    port: 51193
+    check: "tcp-ping"
   # - name: MIX2 at Home
   #   url: home.$DOMAIN_CN
   #   port: 60001
