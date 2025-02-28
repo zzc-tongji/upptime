@@ -1,7 +1,7 @@
 url: https://mp.$DOMAIN_CN/index.js
-status: up
-code: 200
-responseTime: 29747
-lastUpdated: 2025-02-28T09:55:48.044Z
+status: down
+code: 502
+responseTime: 2626
+lastUpdated: 2025-02-28T20:04:22.653Z
 startTime: 2025-02-16T13:06:55.974Z
 generator: Upptime <https://github.com/upptime/upptime>
