@@ -1,3 +1,4 @@
+name: Notify
 on:
   issues:
     types: [opened, reopened, closed]
