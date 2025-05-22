@@ -1,7 +1,7 @@
-url: https://bt.$DOMAIN_CN/css/login.css
+url: https://bt.$DOMAIN_CN/scripts/login.js
 status: up
 code: 200
-responseTime: 1171
-lastUpdated: 2025-05-22T08:46:18.488Z
+responseTime: 903
+lastUpdated: 2025-05-22T08:57:25.635Z
 startTime: 2025-02-16T13:06:54.650Z
 generator: Upptime <https://github.com/upptime/upptime>
