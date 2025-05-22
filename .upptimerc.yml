@@ -15,7 +15,7 @@ sites:
   - name: Feishu Service
     url: https://feishu.$DOMAIN_CN/
   - name: qBittorrent Service
-    url: https://bt.$DOMAIN_CN/css/login.css
+    url: https://bt.$DOMAIN_CN/scripts/login.js
   - name: MoviePilot Service
     url: https://mp.$DOMAIN_CN/api/v1/login/wallpapers
 #
