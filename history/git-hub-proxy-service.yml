@@ -1,7 +1,7 @@
 url: https://gh.$DOMAIN_US/https://api.github.com/
-status: up
-code: 200
-responseTime: 395
-lastUpdated: 2025-10-14T23:06:18.572Z
+status: down
+code: 0
+responseTime: 0
+lastUpdated: 2025-10-15T07:31:34.494Z
 startTime: 2024-07-11T13:25:20.612Z
 generator: Upptime <https://github.com/upptime/upptime>
