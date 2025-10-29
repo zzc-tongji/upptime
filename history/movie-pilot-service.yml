@@ -1,7 +1,7 @@
 url: https://mp.$DOMAIN_CN/api/v1/login/wallpapers
 status: down
 code: 504
-responseTime: 7274
-lastUpdated: 2025-10-29T18:55:29.199Z
+responseTime: 6917
+lastUpdated: 2025-10-29T23:07:53.553Z
 startTime: 2025-02-16T13:06:55.974Z
 generator: Upptime <https://github.com/upptime/upptime>
