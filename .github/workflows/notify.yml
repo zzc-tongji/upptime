@@ -19,4 +19,4 @@ jobs:
           ISSUE_TITLE="${{ github.event.issue.title }}"
           ISSUE_TITLE="${ISSUE_TITLE/🛑/🆗}"
           ISSUE_TITLE="${ISSUE_TITLE/down/up}"
-          curl -d '{"chat":"network","title":"Upptime 通知","body":"$ISSUE_TITLE [#${{ github.event.issue.number }}](${{ github.event.issue.html_url }})","todo":false}' -H 'Content-Type: application/json' -H 'Authorization: Bearer ${{ secrets.FEISHU_SERVICE_TOKEN }}' -X 'POST' 'https://feishu.zzc.cool/service/notification'
+          curl -d "{\"chat\":\"network\",\"title\":\"Upptime 通知\",\"body\":\"$ISSUE_TITLE [#${{ github.event.issue.number }}](${{ github.event.issue.html_url }})\",\"todo\":false}" -H 'Content-Type: application/json' -H 'Authorization: Bearer ${{ secrets.FEISHU_SERVICE_TOKEN }}' -X 'POST' 'https://feishu.zzc.cool/service/notification'
