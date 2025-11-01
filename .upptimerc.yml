@@ -6,7 +6,7 @@ sites:
   - name: S3 File Service
     url: https://file.$DOMAIN_US/
   - name: GitHub Proxy Service
-    url: https://gh.$DOMAIN_US/https://api.github.com/
+    url: https://gh.$DOMAIN_US/https://raw.githubusercontent.com/github/docs/refs/heads/main/.npmrc
 #
   - name: OSS File Service
     url: https://file.$DOMAIN_CN/
