@@ -1,7 +1,7 @@
 url: https://gh.$DOMAIN_US/https://raw.githubusercontent.com/github/docs/refs/heads/main/.npmrc
-status: down
-code: 500
-responseTime: 535
-lastUpdated: 2025-11-15T16:38:32.544Z
+status: up
+code: 200
+responseTime: 326
+lastUpdated: 2025-11-15T16:47:27.624Z
 startTime: 2024-07-11T13:25:20.612Z
 generator: Upptime <https://github.com/upptime/upptime>
