@@ -6,10 +6,8 @@ jobs:
   notify:
     name: Notify
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
     env:
-      GH_TOKEN: ${{ github.token }}
+      GH_TOKEN: ${{ secrets.GH_PAT }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -24,7 +22,9 @@ jobs:
           if [ "$(echo $response | jq -r '.ok')" = "true" ]; then
             echo "post issue comment with feishu message id"
             feishu_message_id=$(echo $response | jq -r '.feishu_response.data.message_id')
-            gh issue comment "${{ github.event.issue.number }}" --body "$feishu_message_id"            
+            gh issue unlock "${{ github.event.issue.number }}"
+            gh issue comment "${{ github.event.issue.number }}" --body "$feishu_message_id"
+            gh issue lock "${{ github.event.issue.number }}"          
           fi
       - name: Closed
         if: ${{ github.event.issue.state == 'closed' }}
@@ -45,7 +45,9 @@ jobs:
             echo "delete issue comment with feishu message id"
             comment_url=$(echo "$issue_comment_list" | jq -r '.[0].url')
             comment_number=${comment_url##*issuecomment-}
+            gh issue unlock "${{ github.event.issue.number }}"
             gh api --method DELETE "/repos/${{github.repository}}/issues/comments/$comment_number"
+            gh issue lock "${{ github.event.issue.number }}"
           else
             echo "post feishu message for service up"
             curl -d "{\"chat\":\"network\",\"title\":\"Upptime 通知\",\"body\":\"$ISSUE_TITLE [#${{ github.event.issue.number }}](${{ github.event.issue.html_url }})\"}" -H 'Content-Type: application/json' -H 'Authorization: Bearer ${{ secrets.FEISHU_SERVICE_TOKEN }}' -X 'POST' 'https://feishu.zzc.cool/service/notification?feishu_msg_type=text'
