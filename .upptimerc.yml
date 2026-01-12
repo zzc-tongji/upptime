@@ -67,8 +67,6 @@ status-website:
       href: https://github.com/zzc-tongji/upptime
   apiBaseUrl: https://api.github.com
   userContentBaseUrl: https://raw.githubusercontent.com
-#
-skipDeleteIssues: true
 
 # Upptime also supports notifications, assigning issues, and more
 # See https://upptime.js.org/docs/configuration
