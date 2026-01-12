@@ -30,22 +30,24 @@ jobs:
         if: ${{ github.event.issue.state == 'closed' }}
         shell: bash
         run: |
-          echo "post feishu message for service up"
           ISSUE_TITLE="${{ github.event.issue.title }}"
           ISSUE_TITLE="${ISSUE_TITLE/🛑/🆗}"
           ISSUE_TITLE="${ISSUE_TITLE/down/up}"
-          curl -d "{\"chat\":\"network\",\"title\":\"Upptime 通知\",\"body\":\"$ISSUE_TITLE [#${{ github.event.issue.number }}](${{ github.event.issue.html_url }})\"}" -H 'Content-Type: application/json' -H 'Authorization: Bearer ${{ secrets.FEISHU_SERVICE_TOKEN }}' -X 'POST' 'https://feishu.zzc.cool/service/notification?feishu_msg_type=text'
-          echo ""
+          #
           echo "get issue comment with feishu message id"
           issue_comment_list=$(gh issue view "${{ github.event.issue.number }}" --json comments --jq '.comments')
           feishu_message_id=$(echo "$issue_comment_list" | jq -r '.[0].body')
           if [[ "$feishu_message_id" =~ om_[a-z0-9]+ ]]; then
             echo "put feishu message with service up"
-            curl -d "{\"chat\":\"network\",\"title\":\"Upptime 通知\",\"body\":\"${{ github.event.issue.title }} [#${{ github.event.issue.number }}](${{ github.event.issue.html_url }})\n\n$ISSUE_TITLE [#${{ github.event.issue.number }}](${{ github.event.issue.html_url }})\"}" -H 'Content-Type: application/json' -H 'Authorization: Bearer ${{ secrets.FEISHU_SERVICE_TOKEN }}' -X 'PUT' "https://feishu.zzc.cool/service/notification?feishu_message_id=$feishu_message_id"
+            TZ=Asia/Shanghai curl -d "{\"chat\":\"network\",\"title\":\"Upptime 通知\",\"body\":\"${{ github.event.issue.title }} [#${{ github.event.issue.number }}](${{ github.event.issue.html_url }})\n\n$ISSUE_TITLE [#${{ github.event.issue.number }}](${{ github.event.issue.html_url }}) at $(date +'%Y-%m-%dT%H:%M:%S%:z')\"}" -H 'Content-Type: application/json' -H 'Authorization: Bearer ${{ secrets.FEISHU_SERVICE_TOKEN }}' -X 'PUT' "https://feishu.zzc.cool/service/notification?feishu_message_id=$feishu_message_id"
             echo ""
             #
             echo "delete issue comment with feishu message id"
             comment_url=$(echo "$issue_comment_list" | jq -r '.[0].url')
             comment_number=${comment_url##*issuecomment-}
             gh api --method DELETE "/repos/${{github.repository}}/issues/comments/$comment_number"
+          else
+            echo "post feishu message for service up"
+            curl -d "{\"chat\":\"network\",\"title\":\"Upptime 通知\",\"body\":\"$ISSUE_TITLE [#${{ github.event.issue.number }}](${{ github.event.issue.html_url }})\"}" -H 'Content-Type: application/json' -H 'Authorization: Bearer ${{ secrets.FEISHU_SERVICE_TOKEN }}' -X 'POST' 'https://feishu.zzc.cool/service/notification?feishu_msg_type=text'
+            echo ""
           fi
