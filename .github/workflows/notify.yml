@@ -19,7 +19,7 @@ jobs:
         shell: bash
         run: |
           echo "post feishu message for service down"
-          response=$(curl -d '{"chat":"network","title":"Upptime 通知","body":"${{ github.event.issue.title }} [#${{ github.event.issue.number }}](${{ github.event.issue.html_url }})"}' -H 'Content-Type: application/json' -H 'Authorization: Bearer ${{ secrets.FEISHU_SERVICE_TOKEN }}' -X 'POST' 'https://feishu.zzc.cool/service/notification?feishu_msg_type=text')
+          response=$(curl -d '{"chat":"network","title":"Upptime 通知","body":"${{ github.event.issue.title }} [#${{ github.event.issue.number }}](${{ github.event.issue.html_url }})"}' -H 'Content-Type: application/json' -H 'Authorization: Bearer ${{ secrets.FEISHU_SERVICE_TOKEN }}' -X 'POST' 'https://feishu.zzc.cool/service/notification?feishu_msg_type=wrapped_text')
           if [ "$(echo $response | jq -r '.ok')" = "true" ]; then
             echo "put issue with feishu message id"
             body=$(gh issue view "${{ github.event.issue.number }}" --json 'body' --jq '.body')
@@ -41,6 +41,6 @@ jobs:
             echo ""
           else
             echo "post feishu message for service up"
-            curl -d "{\"chat\":\"network\",\"title\":\"Upptime 通知\",\"body\":\"$ISSUE_TITLE [#${{ github.event.issue.number }}](${{ github.event.issue.html_url }})\"}" -H 'Content-Type: application/json' -H 'Authorization: Bearer ${{ secrets.FEISHU_SERVICE_TOKEN }}' -X 'POST' 'https://feishu.zzc.cool/service/notification?feishu_msg_type=text'
+            curl -d "{\"chat\":\"network\",\"title\":\"Upptime 通知\",\"body\":\"$ISSUE_TITLE [#${{ github.event.issue.number }}](${{ github.event.issue.html_url }})\"}" -H 'Content-Type: application/json' -H 'Authorization: Bearer ${{ secrets.FEISHU_SERVICE_TOKEN }}' -X 'POST' 'https://feishu.zzc.cool/service/notification?feishu_msg_type=wrapped_text'
             echo ""
           fi
