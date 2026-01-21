@@ -342,7 +342,7 @@
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "98.82%",
-    "uptimeYear": "90.09%",
+    "uptimeYear": "90.11%",
     "time": 223,
     "timeDay": 204,
     "timeWeek": 233,
@@ -406,8 +406,7 @@
       "2025-01-25": 1440,
       "2025-01-24": 1440,
       "2025-01-23": 1440,
-      "2025-01-22": 1440,
-      "2025-01-21": 1440
+      "2025-01-22": 1440
     }
   },
   {
@@ -670,18 +669,19 @@
     "icon": "https://icons.duckduckgo.com/ip3/null.ico",
     "slug": "um-300-at-home",
     "status": "down",
-    "uptime": "89.92%",
-    "uptimeDay": "99.96%",
+    "uptime": "89.91%",
+    "uptimeDay": "95.16%",
     "uptimeWeek": "93.32%",
-    "uptimeMonth": "62.55%",
-    "uptimeYear": "88.44%",
+    "uptimeMonth": "62.39%",
+    "uptimeYear": "88.43%",
     "time": 232,
     "timeDay": 0,
     "timeWeek": 241,
     "timeMonth": 289,
     "timeYear": 232,
     "dailyMinutesDown": {
-      "2026-01-20": 1,
+      "2026-01-21": 19,
+      "2026-01-20": 51,
       "2026-01-19": 121,
       "2026-01-18": 57,
       "2026-01-16": 351,
