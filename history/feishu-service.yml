@@ -1,7 +1,7 @@
 url: https://feishu.$DOMAIN_CN/
-status: up
-code: 200
-responseTime: 1258
-lastUpdated: 2026-01-22T15:33:27.169Z
+status: down
+code: 504
+responseTime: 7459
+lastUpdated: 2026-01-22T22:53:15.546Z
 startTime: 2024-07-11T13:25:24.828Z
 generator: Upptime <https://github.com/upptime/upptime>
