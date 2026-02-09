@@ -65,7 +65,7 @@
     "uptime": "92.85%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
-    "uptimeMonth": "95.90%",
+    "uptimeMonth": "96.06%",
     "uptimeYear": "89.06%",
     "time": 1490,
     "timeDay": 1375,
@@ -131,7 +131,7 @@
     "uptime": "98.61%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "99.83%",
-    "uptimeMonth": "95.05%",
+    "uptimeMonth": "95.21%",
     "uptimeYear": "98.16%",
     "time": 1226,
     "timeDay": 1153,
@@ -181,7 +181,7 @@
     "uptime": "95.36%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "71.37%",
-    "uptimeMonth": "88.20%",
+    "uptimeMonth": "88.36%",
     "uptimeYear": "95.36%",
     "time": 1429,
     "timeDay": 1276,
@@ -249,11 +249,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/mp.$domain_cn.ico",
     "slug": "movie-pilot-service",
     "status": "up",
-    "uptime": "95.20%",
+    "uptime": "95.21%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "71.38%",
-    "uptimeMonth": "88.17%",
-    "uptimeYear": "95.20%",
+    "uptimeMonth": "88.33%",
+    "uptimeYear": "95.21%",
     "time": 4447,
     "timeDay": 1215,
     "timeWeek": 1576,
@@ -434,7 +434,7 @@
     "uptimeDay": "100.00%",
     "uptimeWeek": "71.54%",
     "uptimeMonth": "93.05%",
-    "uptimeYear": "97.11%",
+    "uptimeYear": "97.13%",
     "time": 223,
     "timeDay": 210,
     "timeWeek": 221,
@@ -470,8 +470,7 @@
       "2025-02-25": 1070,
       "2025-02-22": 106,
       "2025-02-21": 64,
-      "2025-02-10": 273,
-      "2025-02-09": 395
+      "2025-02-10": 273
     }
   },
   {
@@ -484,7 +483,7 @@
     "uptimeDay": "100.00%",
     "uptimeWeek": "71.54%",
     "uptimeMonth": "93.05%",
-    "uptimeYear": "97.15%",
+    "uptimeYear": "97.16%",
     "time": 224,
     "timeDay": 209,
     "timeWeek": 221,
@@ -519,8 +518,7 @@
       "2025-02-25": 1070,
       "2025-02-22": 106,
       "2025-02-21": 64,
-      "2025-02-10": 273,
-      "2025-02-09": 395
+      "2025-02-10": 273
     }
   },
   {
@@ -605,7 +603,7 @@
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
-    "uptimeYear": "88.51%",
+    "uptimeYear": "88.52%",
     "time": 232,
     "timeDay": 217,
     "timeWeek": 233,
@@ -664,8 +662,7 @@
       "2025-06-13": 30,
       "2025-02-25": 1067,
       "2025-02-24": 27,
-      "2025-02-23": 16,
-      "2025-02-09": 395
+      "2025-02-23": 16
     }
   },
   {
@@ -675,10 +672,10 @@
     "slug": "um-300-at-home",
     "status": "up",
     "uptime": "87.86%",
-    "uptimeDay": "0.03%",
+    "uptimeDay": "4.91%",
     "uptimeWeek": "28.52%",
-    "uptimeMonth": "46.35%",
-    "uptimeYear": "85.72%",
+    "uptimeMonth": "46.51%",
+    "uptimeYear": "85.73%",
     "time": 232,
     "timeDay": 214,
     "timeWeek": 229,
@@ -783,8 +780,7 @@
       "2025-05-14": 728,
       "2025-02-25": 1407,
       "2025-02-24": 1004,
-      "2025-02-23": 15,
-      "2025-02-09": 395
+      "2025-02-23": 15
     }
   }
 ]
