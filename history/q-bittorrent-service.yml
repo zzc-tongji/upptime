@@ -1,7 +1,7 @@
 url: https://bt.$DOMAIN_CN/scripts/login.js
-status: up
-code: 200
-responseTime: 615
-lastUpdated: 2026-03-22T23:10:56.159Z
+status: down
+code: 504
+responseTime: 7188
+lastUpdated: 2026-03-23T22:43:02.709Z
 startTime: 2025-02-16T13:06:54.650Z
 generator: Upptime <https://github.com/upptime/upptime>
