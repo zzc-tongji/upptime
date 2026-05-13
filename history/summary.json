@@ -64,7 +64,7 @@
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
-    "uptimeYear": "89.62%",
+    "uptimeYear": "89.63%",
     "time": 1729,
     "timeDay": 1774,
     "timeWeek": 1690,
@@ -113,8 +113,7 @@
       "2025-06-06": 36,
       "2025-06-05": 284,
       "2025-05-15": 57,
-      "2025-05-14": 1440,
-      "2025-05-13": 1440
+      "2025-05-14": 1440
     }
   },
   {
@@ -127,7 +126,7 @@
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
-    "uptimeYear": "97.66%",
+    "uptimeYear": "97.68%",
     "time": 1366,
     "timeDay": 1223,
     "timeWeek": 976,
@@ -173,8 +172,7 @@
       "2025-07-15": 20,
       "2025-06-26": 20,
       "2025-05-15": 14,
-      "2025-05-14": 1440,
-      "2025-05-13": 1440
+      "2025-05-14": 1440
     }
   },
   {
@@ -183,11 +181,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/bt.$domain_cn.ico",
     "slug": "q-bittorrent-service",
     "status": "up",
-    "uptime": "91.56%",
+    "uptime": "91.57%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
-    "uptimeMonth": "63.93%",
-    "uptimeYear": "91.31%",
+    "uptimeMonth": "64.09%",
+    "uptimeYear": "91.32%",
     "time": 1453,
     "timeDay": 1016,
     "timeWeek": 854,
@@ -264,8 +262,7 @@
       "2025-06-30": 229,
       "2025-06-26": 20,
       "2025-05-15": 14,
-      "2025-05-14": 1440,
-      "2025-05-13": 1440
+      "2025-05-14": 1440
     }
   },
   {
@@ -277,8 +274,8 @@
     "uptime": "91.44%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
-    "uptimeMonth": "63.93%",
-    "uptimeYear": "91.40%",
+    "uptimeMonth": "64.09%",
+    "uptimeYear": "91.41%",
     "time": 3339,
     "timeDay": 910,
     "timeWeek": 900,
@@ -356,8 +353,7 @@
       "2025-07-01": 1440,
       "2025-06-30": 229,
       "2025-06-26": 37,
-      "2025-05-14": 1434,
-      "2025-05-13": 1440
+      "2025-05-14": 1434
     }
   },
   {
@@ -369,7 +365,7 @@
     "uptime": "95.89%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
-    "uptimeMonth": "63.93%",
+    "uptimeMonth": "64.09%",
     "uptimeYear": "93.67%",
     "time": 222,
     "timeDay": 251,
@@ -419,7 +415,7 @@
     "uptime": "87.26%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
-    "uptimeMonth": "63.93%",
+    "uptimeMonth": "64.09%",
     "uptimeYear": "88.80%",
     "time": 222,
     "timeDay": 256,
@@ -507,7 +503,7 @@
     "uptime": "94.28%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
-    "uptimeMonth": "63.93%",
+    "uptimeMonth": "64.09%",
     "uptimeYear": "92.92%",
     "time": 223,
     "timeDay": 257,
@@ -570,7 +566,7 @@
     "uptime": "94.31%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
-    "uptimeMonth": "63.93%",
+    "uptimeMonth": "64.09%",
     "uptimeYear": "92.96%",
     "time": 224,
     "timeDay": 254,
