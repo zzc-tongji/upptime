@@ -177,11 +177,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/bt.$domain_cn.ico",
     "slug": "q-bittorrent-service",
     "status": "down",
-    "uptime": "92.02%",
-    "uptimeDay": "96.05%",
-    "uptimeWeek": "99.44%",
-    "uptimeMonth": "99.87%",
-    "uptimeYear": "91.85%",
+    "uptime": "92.01%",
+    "uptimeDay": "90.77%",
+    "uptimeWeek": "98.68%",
+    "uptimeMonth": "99.70%",
+    "uptimeYear": "91.84%",
     "time": 1422,
     "timeDay": 444,
     "timeWeek": 749,
@@ -257,7 +257,8 @@
       "2026-04-11": 1440,
       "2026-04-10": 1440,
       "2026-04-09": 81,
-      "2026-06-07": 57
+      "2026-06-08": 48,
+      "2026-06-07": 85
     }
   },
   {
@@ -266,11 +267,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/mp.$domain_cn.ico",
     "slug": "movie-pilot-service",
     "status": "down",
-    "uptime": "91.90%",
-    "uptimeDay": "96.07%",
-    "uptimeWeek": "99.44%",
-    "uptimeMonth": "99.87%",
-    "uptimeYear": "91.94%",
+    "uptime": "91.89%",
+    "uptimeDay": "90.78%",
+    "uptimeWeek": "98.68%",
+    "uptimeMonth": "99.70%",
+    "uptimeYear": "91.93%",
     "time": 3097,
     "timeDay": 402,
     "timeWeek": 845,
@@ -348,7 +349,8 @@
       "2026-04-11": 1440,
       "2026-04-10": 1440,
       "2026-04-09": 81,
-      "2026-06-07": 57
+      "2026-06-08": 48,
+      "2026-06-07": 85
     }
   },
   {
@@ -358,10 +360,10 @@
     "slug": "frp-service",
     "status": "down",
     "uptime": "96.03%",
-    "uptimeDay": "96.10%",
-    "uptimeWeek": "99.44%",
-    "uptimeMonth": "99.87%",
-    "uptimeYear": "93.66%",
+    "uptimeDay": "90.82%",
+    "uptimeWeek": "98.69%",
+    "uptimeMonth": "99.70%",
+    "uptimeYear": "93.65%",
     "time": 222,
     "timeDay": 0,
     "timeWeek": 214,
@@ -399,7 +401,8 @@
       "2026-04-11": 1440,
       "2026-04-10": 1440,
       "2026-04-09": 81,
-      "2026-06-07": 56
+      "2026-06-08": 48,
+      "2026-06-07": 85
     }
   },
   {
@@ -408,11 +411,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/null.ico",
     "slug": "mix-2-at-frp",
     "status": "down",
-    "uptime": "87.73%",
-    "uptimeDay": "96.14%",
-    "uptimeWeek": "99.45%",
-    "uptimeMonth": "99.87%",
-    "uptimeYear": "88.79%",
+    "uptime": "87.72%",
+    "uptimeDay": "90.85%",
+    "uptimeWeek": "98.69%",
+    "uptimeMonth": "99.70%",
+    "uptimeYear": "88.77%",
     "time": 222,
     "timeDay": 0,
     "timeWeek": 215,
@@ -488,7 +491,8 @@
       "2026-04-11": 1440,
       "2026-04-10": 1440,
       "2026-04-09": 81,
-      "2026-06-07": 56
+      "2026-06-08": 48,
+      "2026-06-07": 84
     }
   },
   {
@@ -498,10 +502,10 @@
     "slug": "n40-at-frp",
     "status": "down",
     "uptime": "94.48%",
-    "uptimeDay": "96.17%",
-    "uptimeWeek": "99.45%",
-    "uptimeMonth": "99.87%",
-    "uptimeYear": "92.91%",
+    "uptimeDay": "90.89%",
+    "uptimeWeek": "98.70%",
+    "uptimeMonth": "99.70%",
+    "uptimeYear": "92.90%",
     "time": 222,
     "timeDay": 0,
     "timeWeek": 216,
@@ -552,7 +556,8 @@
       "2026-04-11": 1440,
       "2026-04-10": 1440,
       "2026-04-09": 81,
-      "2026-06-07": 55
+      "2026-06-08": 48,
+      "2026-06-07": 84
     }
   },
   {
@@ -561,11 +566,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/null.ico",
     "slug": "um-300-at-frp",
     "status": "down",
-    "uptime": "94.52%",
-    "uptimeDay": "96.21%",
-    "uptimeWeek": "99.46%",
-    "uptimeMonth": "99.88%",
-    "uptimeYear": "92.95%",
+    "uptime": "94.51%",
+    "uptimeDay": "90.92%",
+    "uptimeWeek": "98.70%",
+    "uptimeMonth": "99.70%",
+    "uptimeYear": "92.93%",
     "time": 224,
     "timeDay": 0,
     "timeWeek": 214,
@@ -615,7 +620,8 @@
       "2026-04-11": 1440,
       "2026-04-10": 1440,
       "2026-04-09": 81,
-      "2026-06-07": 55
+      "2026-06-08": 48,
+      "2026-06-07": 83
     }
   },
   {
@@ -624,7 +630,7 @@
     "icon": "https://icons.duckduckgo.com/ip3/null.ico",
     "slug": "open-vpn-at-home",
     "status": "up",
-    "uptime": "87.86%",
+    "uptime": "87.87%",
     "uptimeDay": "98.20%",
     "uptimeWeek": "99.74%",
     "uptimeMonth": "99.89%",
