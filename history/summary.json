@@ -117,17 +117,17 @@
     "url": "https://feishu.$DOMAIN_CN/",
     "icon": "https://icons.duckduckgo.com/ip3/feishu.$domain_cn.ico",
     "slug": "feishu-service",
-    "status": "up",
+    "status": "down",
     "uptime": "98.47%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "99.67%",
+    "uptimeDay": "99.67%",
+    "uptimeWeek": "99.95%",
+    "uptimeMonth": "99.66%",
     "uptimeYear": "98.18%",
-    "time": 1380,
-    "timeDay": 1112,
-    "timeWeek": 869,
-    "timeMonth": 1170,
-    "timeYear": 1492,
+    "time": 1423,
+    "timeDay": 16513,
+    "timeWeek": 4750,
+    "timeMonth": 2048,
+    "timeYear": 1564,
     "dailyMinutesDown": {
       "2025-07-15": 20,
       "2025-09-10": 270,
@@ -169,7 +169,8 @@
       "2026-05-22": 18,
       "2026-05-28": 58,
       "2026-06-21": 46,
-      "2026-06-22": 98
+      "2026-06-22": 98,
+      "2026-07-02": 5
     }
   },
   {
@@ -638,7 +639,7 @@
     "uptimeDay": "100.00%",
     "uptimeWeek": "99.72%",
     "uptimeMonth": "99.80%",
-    "uptimeYear": "85.05%",
+    "uptimeYear": "85.10%",
     "time": 227,
     "timeDay": 237,
     "timeWeek": 235,
@@ -723,7 +724,7 @@
     "uptimeDay": "100.00%",
     "uptimeWeek": "99.76%",
     "uptimeMonth": "99.82%",
-    "uptimeYear": "85.05%",
+    "uptimeYear": "85.09%",
     "time": 228,
     "timeDay": 231,
     "timeWeek": 232,
@@ -804,11 +805,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/null.ico",
     "slug": "um-300-at-home",
     "status": "down",
-    "uptime": "86.04%",
-    "uptimeDay": "99.95%",
-    "uptimeWeek": "96.63%",
-    "uptimeMonth": "99.17%",
-    "uptimeYear": "81.67%",
+    "uptime": "86.02%",
+    "uptimeDay": "83.58%",
+    "uptimeWeek": "94.29%",
+    "uptimeMonth": "98.63%",
+    "uptimeYear": "81.62%",
     "time": 232,
     "timeDay": 230,
     "timeWeek": 233,
@@ -928,7 +929,7 @@
       "2026-06-07": 25,
       "2026-06-30": 290,
       "2026-06-29": 49,
-      "2026-07-02": 1
+      "2026-07-02": 236
     }
   }
 ]
