@@ -14,8 +14,45 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
+      - name: Feishu Service Status
+        id: feishu-service
+        shell: bash
+        run: |
+          status="$(awk -F': *' '$1 == "status" { print $2; exit }' history/feishu-service.yml | tr -d '\r"')"
+          echo "status=${status:-unknown}" >> "$GITHUB_OUTPUT"
+          echo "feishu-service status: ${status:-unknown}"
+      - name: Feishu (vps-cn) Down
+        if: ${{ steps.feishu-service.outputs.status != 'up' }}
+        shell: bash
+        run: |
+          #
+          # feishu offical webhook
+          #
+          webhook_url='${{ secrets.FEISHU_WEBHOOK_URL }}'
+          if [ -z "$webhook_url" ]; then
+            echo "::error::FEISHU_WEBHOOK_URL secret is required when feishu-service is not up"
+            exit 1
+          fi
+          post_feishu() {
+            local text="$1"
+            local payload
+            payload=$(jq -n --arg text "$text" '{msg_type:"text",content:{text:$text}}')
+            curl -fsS -d "$payload" -H 'Content-Type: application/json' -X 'POST' "$webhook_url"
+            echo ""
+          }
+          echo "feishu offical webhook set"
+          #
+          # notify with feishu official webhook
+          #
+          issue_title="${{ github.event.issue.title }}"
+          if [ "${{ github.event.issue.state }}" = "closed" ]; then
+            issue_title="${issue_title/🛑/🆗}"
+            issue_title="${issue_title/down/up}"
+          fi
+          post_feishu "$(printf 'Upptime 通知\n%s #%s\n%s\nat %s' "$issue_title" '${{ github.event.issue.number }}' '${{ github.event.issue.html_url }}' "$(TZ=Asia/Shanghai date +'%Y-%m-%dT%H:%M:%S%:z')")"
+          echo "status notified"
       - name: Opened
-        if: ${{ github.event.issue.state != 'closed' }}
+        if: ${{ steps.feishu-service.outputs.status == 'up' && github.event.issue.state != 'closed' }}
         shell: bash
         run: |
           echo "post feishu message for service down"
@@ -27,7 +64,7 @@ jobs:
             gh issue edit "${{ github.event.issue.number }}" --body "$body"
           fi
       - name: Closed
-        if: ${{ github.event.issue.state == 'closed' }}
+        if: ${{ steps.feishu-service.outputs.status == 'up' && github.event.issue.state == 'closed' }}
         shell: bash
         run: |
           issue_title="${{ github.event.issue.title }}"
