@@ -14,13 +14,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
-      - name: Feishu Service Status
+      - name: Feishu (vps-cn) Status
         id: feishu-service
         shell: bash
         run: |
           status="$(awk -F': *' '$1 == "status" { print $2; exit }' history/feishu-service.yml | tr -d '\r"')"
           echo "status=${status:-unknown}" >> "$GITHUB_OUTPUT"
-          echo "feishu-service status: ${status:-unknown}"
+          echo "feishu (vps-cn) status: ${status:-unknown}"
       - name: Feishu (vps-cn) Down
         if: ${{ steps.feishu-service.outputs.status != 'up' }}
         shell: bash
