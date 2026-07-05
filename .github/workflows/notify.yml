@@ -49,7 +49,8 @@ jobs:
             issue_title="${issue_title/🛑/🆗}"
             issue_title="${issue_title/down/up}"
           fi
-          post_feishu "$(printf 'Upptime 通知\n%s #%s\n%s\nat %s' "$issue_title" '${{ github.event.issue.number }}' '${{ github.event.issue.html_url }}' "$(TZ=Asia/Shanghai date +'%Y-%m-%dT%H:%M:%S%:z')")"
+          message=$(printf '**Upptime 通知**\n\n%s [#%s](%s) at %s' "$issue_title" '${{ github.event.issue.number }}' '${{ github.event.issue.html_url }}' "$(TZ=Asia/Shanghai date +'%Y-%m-%dT%H:%M:%S%:z')")
+          post_feishu "$message"
           echo "status notified"
       - name: Opened
         if: ${{ steps.feishu-service.outputs.status == 'up' && github.event.issue.state != 'closed' }}
