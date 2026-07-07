@@ -18,9 +18,14 @@ jobs:
         id: feishu-service
         shell: bash
         run: |
-          status="$(awk -F': *' '$1 == "status" { print $2; exit }' history/feishu-service.yml | tr -d '\r"')"
-          echo "status=${status:-unknown}" >> "$GITHUB_OUTPUT"
-          echo "feishu (vps-cn) status: ${status:-unknown}"
+          matching_prs="$(gh pr list --state open --json title --jq '[.[] | select(.title | contains("Feishu Service"))] | length')"
+          if [ "${matching_prs:-0}" -gt 0 ]; then
+            status="down"
+          else
+            status="up"
+          fi
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          echo "feishu (vps-cn) status: $status"
       - name: Feishu (vps-cn) Down
         if: ${{ steps.feishu-service.outputs.status != 'up' }}
         shell: bash
