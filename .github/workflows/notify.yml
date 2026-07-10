@@ -9,12 +9,21 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ secrets.GH_PAT }}
+      GH_REPO: ${{ github.repository }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
+      - name: Existent
+        id: existent
+        shell: bash
+        run: |
+          if gh issue view "${{ github.event.issue.number }}" --json number --jq '.number' >/dev/null 2>&1; then
+            echo "is-existent=true" >> "$GITHUB_OUTPUT"
+            echo "issue #${{ github.event.issue.number }} exists"
+          else
+            echo "is-existent=false" >> "$GITHUB_OUTPUT"
+            echo "issue #${{ github.event.issue.number }} does not exist; skip notify workflow"
+          fi
       - name: Feishu (vps-cn) Status
+        if: ${{ steps.existent.outputs.is-existent == 'true' }}
         id: feishu-service
         shell: bash
         run: |
@@ -27,7 +36,7 @@ jobs:
           echo "status=$status" >> "$GITHUB_OUTPUT"
           echo "feishu (vps-cn) status: $status"
       - name: Feishu (vps-cn) Down
-        if: ${{ steps.feishu-service.outputs.status != 'up' }}
+        if: ${{ steps.existent.outputs.is-existent == 'true' && steps.feishu-service.outputs.status != 'up' }}
         shell: bash
         run: |
           #
@@ -58,7 +67,7 @@ jobs:
           post_feishu "$message"
           echo "status notified"
       - name: Opened
-        if: ${{ steps.feishu-service.outputs.status == 'up' && github.event.issue.state != 'closed' }}
+        if: ${{ steps.existent.outputs.is-existent == 'true' && steps.feishu-service.outputs.status == 'up' && github.event.issue.state != 'closed' }}
         shell: bash
         run: |
           echo "post feishu message for service down"
@@ -70,7 +79,7 @@ jobs:
             gh issue edit "${{ github.event.issue.number }}" --body "$body"
           fi
       - name: Closed
-        if: ${{ steps.feishu-service.outputs.status == 'up' && github.event.issue.state == 'closed' }}
+        if: ${{ steps.existent.outputs.is-existent == 'true' && steps.feishu-service.outputs.status == 'up' && github.event.issue.state == 'closed' }}
         shell: bash
         run: |
           issue_title="${{ github.event.issue.title }}"
