@@ -22,82 +22,106 @@ jobs:
             echo "is-existent=false" >> "$GITHUB_OUTPUT"
             echo "issue #${{ github.event.issue.number }} does not exist; skip notify workflow"
           fi
-      - name: Feishu (vps-cn) Status
+      - name: Notify Feishu
         if: ${{ steps.existent.outputs.is-existent == 'true' }}
-        id: feishu-service
         shell: bash
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_STATE: ${{ github.event.issue.state }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+          DOMAIN_CN: ${{ secrets.DOMAIN_CN }}
+          FEISHU_SERVICE_TOKEN: ${{ secrets.FEISHU_SERVICE_TOKEN }}
         run: |
-          matching_prs="$(gh pr list --state open --json title --jq '[.[] | select(.title | contains("Feishu Service"))] | length')"
-          if [ "${matching_prs:-0}" -gt 0 ]; then
-            status="down"
-          else
-            status="up"
-          fi
-          echo "status=$status" >> "$GITHUB_OUTPUT"
-          echo "feishu (vps-cn) status: $status"
-      - name: Feishu (vps-cn) Down
-        if: ${{ steps.existent.outputs.is-existent == 'true' && steps.feishu-service.outputs.status != 'up' }}
-        shell: bash
-        run: |
-          #
-          # feishu offical webhook
-          #
-          webhook_url='${{ secrets.FEISHU_WEBHOOK_URL }}'
-          if [ -z "$webhook_url" ]; then
-            echo "::error::FEISHU_WEBHOOK_URL secret is required when feishu-service is not up"
+          FEISHU_SERVICE_URL="https://fenshu.$DOMAIN_CN/service/notification"
+          if [ -z "$DOMAIN_CN" ]; then
+            echo "::error::DOMAIN_CN secret is required for feishu service notification"
             exit 1
           fi
-          post_feishu() {
+          if [ -z "$FEISHU_SERVICE_TOKEN" ]; then
+            echo "::error::FEISHU_SERVICE_TOKEN secret is required for feishu service notification"
+            exit 1
+          fi
+          if [[ "$FEISHU_SERVICE_URL" == *'{{'* || "$FEISHU_SERVICE_URL" == *'}}'* || "$FEISHU_SERVICE_URL" == "https://fenshu./service/notification" ]]; then
+            echo "::error::Invalid feishu service URL; use secrets.DOMAIN_CN to build it"
+            exit 1
+          fi
+
+          post_official_feishu() {
             local text="$1"
+            local webhook_url='${{ secrets.FEISHU_WEBHOOK_URL }}'
+            if [ -z "$webhook_url" ]; then
+              echo "::error::FEISHU_WEBHOOK_URL secret is required when service notify fails"
+              exit 1
+            fi
             local payload
             payload=$(jq -n --arg text "$text" '{msg_type:"text",content:{text:$text}}')
-            curl -fsS -d "$payload" -H 'Content-Type: application/json' -X 'POST' "$webhook_url"
+            curl --max-time 15 -fsS -d "$payload" -H 'Content-Type: application/json' -X 'POST' "$webhook_url"
             echo ""
           }
-          echo "feishu offical webhook set"
-          #
-          # notify with feishu official webhook
-          #
-          issue_title="${{ github.event.issue.title }}"
-          if [ "${{ github.event.issue.state }}" = "closed" ]; then
+          is_ok_response() {
+            [ -n "$1" ] && [ "$(echo "$1" | jq -r '.ok // false' 2>/dev/null)" = "true" ]
+          }
+
+          post_wrapped_text() {
+            local body="$1"
+            local payload
+            payload=$(jq -n --arg chat "network" --arg title "Upptime 通知" --arg body "$body" '{chat:$chat,title:$title,body:$body}')
+            curl --max-time 15 -fsS -d "$payload" -H 'Content-Type: application/json' -H "Authorization: Bearer $FEISHU_SERVICE_TOKEN" -X 'POST' "$FEISHU_SERVICE_URL?feishu_msg_type=wrapped_text" || true
+          }
+
+          notify_or_fallback() {
+            local response="$1"
+            local official_message="$2"
+            if is_ok_response "$response"; then
+              echo "status notified"
+            else
+              echo "service notify failed; post feishu official webhook"
+              post_official_feishu "$official_message"
+            fi
+          }
+
+          issue_title="$ISSUE_TITLE"
+          if [ "$ISSUE_STATE" = "closed" ]; then
             issue_title="${issue_title/🛑/🆗}"
             issue_title="${issue_title/down/up}"
           fi
-          message=$(printf '**Upptime 通知**\n\n%s [#%s](%s) at %s' "$issue_title" '${{ github.event.issue.number }}' '${{ github.event.issue.html_url }}' "$(TZ=Asia/Shanghai date +'%Y-%m-%dT%H:%M:%S%:z')")
-          post_feishu "$message"
-          echo "status notified"
-      - name: Opened
-        if: ${{ steps.existent.outputs.is-existent == 'true' && steps.feishu-service.outputs.status == 'up' && github.event.issue.state != 'closed' }}
-        shell: bash
-        run: |
-          echo "post feishu message for service down"
-          response=$(curl -d "{\"chat\":\"network\",\"title\":\"Upptime 通知\",\"body\":\"${{ github.event.issue.title }} [#${{ github.event.issue.number }}](${{ github.event.issue.html_url }}) at $(TZ=Asia/Shanghai date +'%Y-%m-%dT%H:%M:%S%:z')\"}" -H 'Content-Type: application/json' -H 'Authorization: Bearer ${{ secrets.FEISHU_SERVICE_TOKEN }}' -X 'POST' 'https://feishu.zzc.cool/service/notification?feishu_msg_type=wrapped_text')
-          if [ "$(echo $response | jq -r '.ok')" = "true" ]; then
-            echo "put issue with feishu message id"
-            body=$(gh issue view "${{ github.event.issue.number }}" --json 'body' --jq '.body')
-            body="$body"$'\n- Feishu message: '"$(echo $response | jq -r '.feishu_response.data.message_id')"
-            gh issue edit "${{ github.event.issue.number }}" --body "$body"
+
+          body="$issue_title [#$ISSUE_NUMBER]($ISSUE_URL) at $(TZ=Asia/Shanghai date +'%Y-%m-%dT%H:%M:%S%:z')"
+          official_message=$(printf '**Upptime 通知**\n\n%s' "$body")
+
+          if [ "$ISSUE_STATE" != "closed" ]; then
+            echo "post feishu message for service down"
+            response=$(post_wrapped_text "$body")
+            if is_ok_response "$response"; then
+              message_id=$(echo "$response" | jq -r '.feishu_response.data.message_id // empty')
+              if [ -n "$message_id" ]; then
+                echo "put issue with feishu message id"
+                issue_body=$(gh issue view "$ISSUE_NUMBER" --json 'body' --jq '.body')
+                issue_body="$issue_body"$'\n- Feishu message: '"$message_id"
+                gh issue edit "$ISSUE_NUMBER" --body "$issue_body"
+              fi
+            fi
+            notify_or_fallback "$response" "$official_message"
+            exit 0
           fi
-      - name: Closed
-        if: ${{ steps.existent.outputs.is-existent == 'true' && steps.feishu-service.outputs.status == 'up' && github.event.issue.state == 'closed' }}
-        shell: bash
-        run: |
-          issue_title="${{ github.event.issue.title }}"
-          issue_title="${issue_title/🛑/🆗}"
-          issue_title="${issue_title/down/up}"
-          #
+
           echo "get issue with feishu message id"
-          if [[ "${{ github.event.issue.body }}" =~ (om_[a-z0-9]+) ]]; then
+          if [[ "$ISSUE_BODY" =~ (om_[a-z0-9]+) ]]; then
             echo "get feishu message"
-            response=$(curl -H 'Authorization: Bearer ${{ secrets.FEISHU_SERVICE_TOKEN }}' -X 'GET' "https://feishu.zzc.cool/service/notification?feishu_message_id=${BASH_REMATCH[1]}")
-            text=$(echo $response | jq -r '.data.text | @json')
-            text=${text//\"/}
-            text="${text/Upptime 通知/<b>Upptime 通知</b>}\n${issue_title} [#${{ github.event.issue.number }}](${{ github.event.issue.html_url }}) at $(TZ=Asia/Shanghai date +'%Y-%m-%dT%H:%M:%S%:z')"
-            echo "put feishu message with service up"
-            curl -d "{\"text\":\"${text}\"}" -H 'Content-Type: application/json' -H 'Authorization: Bearer ${{ secrets.FEISHU_SERVICE_TOKEN }}' -X 'PUT' "https://feishu.zzc.cool/service/notification?feishu_message_id=${BASH_REMATCH[1]}&&feishu_msg_type=text"
-            echo ""
+            message_id="${BASH_REMATCH[1]}"
+            response=$(curl --max-time 15 -fsS -H "Authorization: Bearer $FEISHU_SERVICE_TOKEN" -X 'GET' "$FEISHU_SERVICE_URL?feishu_message_id=$message_id" || true)
+            if is_ok_response "$response"; then
+              text=$(echo "$response" | jq -r '.data.text | @json')
+              text=${text//\"/}
+              text="${text/Upptime 通知/<b>Upptime 通知</b>}\n$body"
+              echo "put feishu message with service up"
+              payload=$(jq -n --arg text "$text" '{text:$text}')
+              response=$(curl --max-time 15 -fsS -d "$payload" -H 'Content-Type: application/json' -H "Authorization: Bearer $FEISHU_SERVICE_TOKEN" -X 'PUT' "$FEISHU_SERVICE_URL?feishu_message_id=$message_id&&feishu_msg_type=text" || true)
+            fi
           else
             echo "post feishu message for service up"
-            curl -d "{\"chat\":\"network\",\"title\":\"Upptime 通知\",\"body\":\"$issue_title [#${{ github.event.issue.number }}](${{ github.event.issue.html_url }}) at $(TZ=Asia/Shanghai date +'%Y-%m-%dT%H:%M:%S%:z')\"}" -H 'Content-Type: application/json' -H 'Authorization: Bearer ${{ secrets.FEISHU_SERVICE_TOKEN }}' -X 'POST' 'https://feishu.zzc.cool/service/notification?feishu_msg_type=wrapped_text'
-            echo ""
+            response=$(post_wrapped_text "$body")
           fi
+          notify_or_fallback "$response" "$official_message"
