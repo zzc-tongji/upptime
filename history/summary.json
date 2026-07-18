@@ -121,11 +121,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/feishu.$domain_cn.ico",
     "slug": "feishu-service",
     "status": "down",
-    "uptime": "98.28%",
-    "uptimeDay": "84.85%",
+    "uptime": "98.27%",
+    "uptimeDay": "80.54%",
     "uptimeWeek": "87.34%",
-    "uptimeMonth": "94.29%",
-    "uptimeYear": "97.74%",
+    "uptimeMonth": "94.15%",
+    "uptimeYear": "97.73%",
     "time": 1690,
     "timeDay": 2841,
     "timeWeek": 4148,
@@ -184,7 +184,7 @@
       "2026-07-16": 484,
       "2026-07-15": 79,
       "2026-07-17": 158,
-      "2026-07-18": 60
+      "2026-07-18": 122
     }
   },
   {
@@ -287,11 +287,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/mp.$domain_cn.ico",
     "slug": "movie-pilot-service",
     "status": "down",
-    "uptime": "91.55%",
-    "uptimeDay": "84.89%",
+    "uptime": "91.54%",
+    "uptimeDay": "80.59%",
     "uptimeWeek": "81.75%",
-    "uptimeMonth": "93.06%",
-    "uptimeYear": "91.04%",
+    "uptimeMonth": "92.92%",
+    "uptimeYear": "91.02%",
     "time": 2233,
     "timeDay": 2397,
     "timeWeek": 3906,
@@ -382,7 +382,7 @@
       "2026-07-16": 484,
       "2026-07-15": 78,
       "2026-07-17": 157,
-      "2026-07-18": 61
+      "2026-07-18": 122
     }
   },
   {
@@ -391,11 +391,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/ph.$domain_cn.ico",
     "slug": "pic-home-service",
     "status": "down",
-    "uptime": "79.94%",
-    "uptimeDay": "84.93%",
+    "uptime": "79.71%",
+    "uptimeDay": "80.63%",
     "uptimeWeek": "81.76%",
-    "uptimeMonth": "79.94%",
-    "uptimeYear": "79.94%",
+    "uptimeMonth": "79.71%",
+    "uptimeYear": "79.71%",
     "time": 3999,
     "timeDay": 2997,
     "timeWeek": 2736,
@@ -414,7 +414,7 @@
       "2026-07-16": 484,
       "2026-07-15": 78,
       "2026-07-17": 156,
-      "2026-07-18": 61
+      "2026-07-18": 123
     }
   },
   {
@@ -730,7 +730,7 @@
     "uptimeDay": "100.00%",
     "uptimeWeek": "99.42%",
     "uptimeMonth": "99.58%",
-    "uptimeYear": "89.20%",
+    "uptimeYear": "89.22%",
     "time": 228,
     "timeDay": 255,
     "timeWeek": 239,
@@ -797,11 +797,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/null.ico",
     "slug": "n40-at-home",
     "status": "up",
-    "uptime": "90.21%",
+    "uptime": "90.22%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "99.46%",
     "uptimeMonth": "99.61%",
-    "uptimeYear": "89.20%",
+    "uptimeYear": "89.21%",
     "time": 227,
     "timeDay": 247,
     "timeWeek": 239,
