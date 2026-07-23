@@ -1,7 +1,7 @@
 url: https://mp.$DOMAIN_CN/api/v1/login/wallpapers
 status: up
 code: 200
-responseTime: 3101
-lastUpdated: 2026-07-22T12:49:12.240Z
+responseTime: 2219
+lastUpdated: 2026-07-23T00:03:59.537Z
 startTime: 2025-02-16T13:06:55.974Z
 generator: Upptime <https://github.com/upptime/upptime>
