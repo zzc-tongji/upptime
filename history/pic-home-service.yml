@@ -1,7 +1,7 @@
 url: https://ph.$DOMAIN_CN/index.php?mod=banner&op=appajax&do=getleftnum
 status: up
 code: 200
-responseTime: 4460
-lastUpdated: 2026-08-06T13:16:53.863Z
+responseTime: 2616
+lastUpdated: 2026-08-07T01:41:58.414Z
 startTime: 2026-07-03T01:45:55.821Z
 generator: Upptime <https://github.com/upptime/upptime>
