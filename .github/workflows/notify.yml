@@ -41,12 +41,15 @@ jobs:
                 post: {
                   zh_cn: {
                     title: $title,
-                    content: [[
-                      {tag: "text", text: $issue_title},
-                      {tag: "text", text: " "},
-                      {tag: "a", text: $issue_link, href: $issue_url},
-                      {tag: "text", text: (" at " + $timestamp)}
-                    ]]
+                    content: [
+                      [{tag: "text", text: ""}],
+                      [
+                        {tag: "text", text: $issue_title},
+                        {tag: "text", text: " "},
+                        {tag: "a", text: $issue_link, href: $issue_url},
+                        {tag: "text", text: (" at " + $timestamp)}
+                      ]
+                    ]
                   }
                 }
               }
