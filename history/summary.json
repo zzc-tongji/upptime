@@ -119,9 +119,9 @@
     "slug": "feishu-service",
     "status": "down",
     "uptime": "97.87%",
-    "uptimeDay": "83.57%",
-    "uptimeWeek": "91.32%",
-    "uptimeMonth": "91.02%",
+    "uptimeDay": "82.30%",
+    "uptimeWeek": "91.14%",
+    "uptimeMonth": "90.98%",
     "uptimeYear": "96.72%",
     "time": 1764,
     "timeDay": 2347,
@@ -205,7 +205,7 @@
       "2026-08-17": 161,
       "2026-08-18": 208,
       "2026-08-19": 70,
-      "2026-08-20": 237
+      "2026-08-20": 255
     }
   },
   {
@@ -215,10 +215,10 @@
     "slug": "q-bittorrent-service",
     "status": "down",
     "uptime": "92.06%",
-    "uptimeDay": "83.59%",
-    "uptimeWeek": "91.07%",
-    "uptimeMonth": "95.07%",
-    "uptimeYear": "90.79%",
+    "uptimeDay": "82.32%",
+    "uptimeWeek": "90.89%",
+    "uptimeMonth": "95.03%",
+    "uptimeYear": "90.78%",
     "time": 1470,
     "timeDay": 2487,
     "timeWeek": 2088,
@@ -314,7 +314,7 @@
       "2026-08-17": 161,
       "2026-08-18": 208,
       "2026-08-19": 70,
-      "2026-08-20": 236
+      "2026-08-20": 255
     }
   },
   {
@@ -324,9 +324,9 @@
     "slug": "movie-pilot-service",
     "status": "down",
     "uptime": "91.39%",
-    "uptimeDay": "83.61%",
-    "uptimeWeek": "91.44%",
-    "uptimeMonth": "91.07%",
+    "uptimeDay": "82.34%",
+    "uptimeWeek": "91.26%",
+    "uptimeMonth": "91.03%",
     "uptimeYear": "90.03%",
     "time": 2446,
     "timeDay": 2293,
@@ -441,7 +441,7 @@
       "2026-08-17": 161,
       "2026-08-18": 207,
       "2026-08-19": 69,
-      "2026-08-20": 236
+      "2026-08-20": 254
     }
   },
   {
@@ -450,11 +450,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/ph.$domain_cn.ico",
     "slug": "pic-home-service",
     "status": "down",
-    "uptime": "86.10%",
-    "uptimeDay": "83.63%",
-    "uptimeWeek": "91.13%",
-    "uptimeMonth": "90.85%",
-    "uptimeYear": "86.10%",
+    "uptime": "86.08%",
+    "uptimeDay": "82.36%",
+    "uptimeWeek": "90.95%",
+    "uptimeMonth": "90.81%",
+    "uptimeYear": "86.08%",
     "time": 3196,
     "timeDay": 3258,
     "timeWeek": 2574,
@@ -498,7 +498,7 @@
       "2026-08-17": 160,
       "2026-08-18": 240,
       "2026-08-19": 69,
-      "2026-08-20": 236
+      "2026-08-20": 254
     }
   },
   {
@@ -565,7 +565,7 @@
     "uptime": "84.77%",
     "uptimeDay": "0.00%",
     "uptimeWeek": "0.00%",
-    "uptimeMonth": "9.98%",
+    "uptimeMonth": "9.94%",
     "uptimeYear": "80.07%",
     "time": 223,
     "timeDay": 0,
@@ -658,7 +658,7 @@
       "2026-07-15": 16,
       "2026-07-17": 28,
       "2026-07-18": 674,
-      "2026-08-20": 1081,
+      "2026-08-20": 1099,
       "2026-08-19": 1440,
       "2026-08-18": 1440,
       "2026-08-17": 1440,
@@ -842,16 +842,16 @@
     "url": "home.$DOMAIN_CN",
     "icon": "https://icons.duckduckgo.com/ip3/null.ico",
     "slug": "open-vpn-at-home",
-    "status": "down",
+    "status": "up",
     "uptime": "89.45%",
-    "uptimeDay": "99.55%",
-    "uptimeWeek": "99.68%",
-    "uptimeMonth": "99.78%",
-    "uptimeYear": "89.99%",
+    "uptimeDay": "98.32%",
+    "uptimeWeek": "99.51%",
+    "uptimeMonth": "99.74%",
+    "uptimeYear": "89.98%",
     "time": 226,
-    "timeDay": 258,
-    "timeWeek": 214,
-    "timeMonth": 225,
+    "timeDay": 233,
+    "timeWeek": 213,
+    "timeMonth": 224,
     "timeYear": 229,
     "dailyMinutesDown": {
       "2025-10-26": 294,
@@ -907,7 +907,7 @@
       "2026-08-08": 33,
       "2026-08-09": 31,
       "2026-08-15": 25,
-      "2026-08-20": 7
+      "2026-08-20": 24
     }
   },
   {
@@ -915,16 +915,16 @@
     "url": "home.$DOMAIN_CN",
     "icon": "https://icons.duckduckgo.com/ip3/null.ico",
     "slug": "n40-at-home",
-    "status": "down",
+    "status": "up",
     "uptime": "90.68%",
-    "uptimeDay": "99.83%",
-    "uptimeWeek": "99.73%",
-    "uptimeMonth": "99.80%",
+    "uptimeDay": "98.60%",
+    "uptimeWeek": "99.55%",
+    "uptimeMonth": "99.76%",
     "uptimeYear": "89.98%",
     "time": 227,
-    "timeDay": 252,
-    "timeWeek": 215,
-    "timeMonth": 220,
+    "timeDay": 231,
+    "timeWeek": 214,
+    "timeMonth": 219,
     "timeYear": 230,
     "dailyMinutesDown": {
       "2025-10-26": 294,
@@ -980,7 +980,7 @@
       "2026-08-08": 32,
       "2026-08-09": 27,
       "2026-08-15": 25,
-      "2026-08-20": 2
+      "2026-08-20": 20
     }
   },
   {
