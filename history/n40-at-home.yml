@@ -1,7 +1,7 @@
 url: home.$DOMAIN_CN
-status: down
-code: 0
-responseTime: 0
-lastUpdated: 2026-10-12T18:00:25.102Z
+status: up
+code: 200
+responseTime: 202
+lastUpdated: 2026-10-12T23:58:23.772Z
 startTime: 2024-09-23T06:48:40.265Z
 generator: Upptime <https://github.com/upptime/upptime>
